@@ -43,6 +43,28 @@ graph TD
     M --> E
 ```
 
+#### Standard Circuit Schematic (ASCII)
+```
+Arduino Uno
++------------+
+|            |
+| Pin 2 ----[220Ω]---->|---- GND
+|            |         LED (Red)
+| Pin 3 ----[220Ω]---->|----+
+|            |         LED (Yellow) |
+| Pin 4 ----[220Ω]---->|----+       |
+|            |         LED (Green)  |
+| GND -------+----------------------+
+|            |
++------------+
+
+Symbols:
+- ---- : Wire
+- [220Ω] : Resistor
+- >|---- : LED (arrow indicates anode direction)
+- + : Junction
+```
+
 ### How to Build and Upload
 1. Install the Arduino IDE from https://www.arduino.cc/en/software
 2. Open the `Traffic_Light_Simulation.ino` file in the Arduino IDE
