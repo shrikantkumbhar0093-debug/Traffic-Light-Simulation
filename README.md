@@ -17,6 +17,13 @@ This project includes both hardware (Arduino) and software (Python) simulations 
 - Connect Green LED to pin 4
 - Use resistors in series with each LED to limit current
 
+#### Detailed Pin Connections
+- **Arduino Pin 2** → Red LED anode (+) → 220Ω resistor → Red LED cathode (-) → Arduino GND
+- **Arduino Pin 3** → Yellow LED anode (+) → 220Ω resistor → Yellow LED cathode (-) → Arduino GND
+- **Arduino Pin 4** → Green LED anode (+) → 220Ω resistor → Green LED cathode (-) → Arduino GND
+
+**Note**: Ensure LEDs are oriented correctly (longer leg is anode). All cathodes share the same GND connection.
+
 ### How to Build and Upload
 1. Install the Arduino IDE from https://www.arduino.cc/en/software
 2. Open the `Traffic_Light_Simulation.ino` file in the Arduino IDE
