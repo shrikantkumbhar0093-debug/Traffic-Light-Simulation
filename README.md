@@ -24,26 +24,29 @@ This project includes both hardware (Arduino) and software (Python) simulations 
 
 **Note**: Ensure LEDs are oriented correctly (longer leg is anode). All cathodes share the same GND connection.
 
-#### Circuit Diagram (ASCII Art)
+#### Circuit Diagram (Breadboard Layout)
 ```
-Arduino Uno
-+------------+
-|            |
-| Pin 2 ----[220Ω]----(Red LED)---- GND
-|            |
-| Pin 3 ----[220Ω]----(Yellow LED)-+
-|            |                     |
-| Pin 4 ----[220Ω]----(Green LED)--+
-|            |
-| GND -------+---------------------+
-|            |
-+------------+
+Breadboard Layout (Top View)
++-----------------------------------+
+| Power Rail (+) | Terminal Strip   |
+| GND            |                   |
+|                | Pin2 --[220]-- R_LED -- GND
+|                |                   |
+|                | Pin3 --[220]-- Y_LED --+
+|                |                   |   |
+|                | Pin4 --[220]-- G_LED --+
+|                |                   |
++-----------------------------------+
 
-Legend:
-- ---- : Wire
-- [220Ω] : Resistor
-- (LED) : LED (anode to left, cathode to right)
-- + : Junction
+Connections:
+- Arduino GND → Breadboard GND rail
+- Arduino Pin 2 → Breadboard row for Red LED circuit
+- Arduino Pin 3 → Breadboard row for Yellow LED circuit
+- Arduino Pin 4 → Breadboard row for Green LED circuit
+- LEDs: Anode (+) to resistor, Cathode (-) to GND rail
+- Resistors: One end to Arduino pin, other to LED anode
+
+Note: Use jumper wires for connections. Ensure no shorts between rows.
 ```
 
 ### How to Build and Upload
