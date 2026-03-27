@@ -24,6 +24,28 @@ This project includes both hardware (Arduino) and software (Python) simulations 
 
 **Note**: Ensure LEDs are oriented correctly (longer leg is anode). All cathodes share the same GND connection.
 
+#### Circuit Diagram (ASCII Art)
+```
+Arduino Uno
++------------+
+|            |
+| Pin 2 ----[220Ω]----(Red LED)---- GND
+|            |
+| Pin 3 ----[220Ω]----(Yellow LED)-+
+|            |                     |
+| Pin 4 ----[220Ω]----(Green LED)--+
+|            |
+| GND -------+---------------------+
+|            |
++------------+
+
+Legend:
+- ---- : Wire
+- [220Ω] : Resistor
+- (LED) : LED (anode to left, cathode to right)
+- + : Junction
+```
+
 ### How to Build and Upload
 1. Install the Arduino IDE from https://www.arduino.cc/en/software
 2. Open the `Traffic_Light_Simulation.ino` file in the Arduino IDE
